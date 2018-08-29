@@ -30,3 +30,5 @@
 4. Document DB - Document DB, Cosmos DB / Two dimensional row-columns, 선언적 스키마, 입증된 안정성 및 보안 
 4. Blob Storage - Azure Blob Storage / 비 구조화된 이미지 등등의 데이터, REST API로 접근 가능, Streaming 혹은 Random Acess 지원
 
+## 여러 Azure IoT 솔루션 비교
+* [https://docs.microsoft.com/en-us/azure/iot-fundamentals/iot-services-and-technologies](https://docs.microsoft.com/en-us/azure/iot-fundamentals/iot-services-and-technologies)
