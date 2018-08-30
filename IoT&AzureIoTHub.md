@@ -32,6 +32,8 @@
 
 ## 여러 Azure IoT 솔루션 비교
 * [https://docs.microsoft.com/en-us/azure/iot-fundamentals/iot-services-and-technologies](https://docs.microsoft.com/en-us/azure/iot-fundamentals/iot-services-and-technologies)
+여러가지의 IoT 관련 컴포넌트들이 Azure상에 있지만 그중에서도 솔루션 형태로 제공되는 것은 두가지가 있다. 
+PaaS 형태의 솔루션인 [Azure IoT solution accelerators](https://azure.microsoft.com/en-us/features/iot-accelerators/)와 SaaS 형태의 솔루션인 [Azure IoT Central](https://azure.microsoft.com/ko-kr/services/iot-central/)이다. Azure IoT solution accelerator는 구 IoT suite으로 불련던 것인데 최근에 개명했다. -_-
 
 ## IoT Hub Messaging
 Device to Cloud, Cloud to Device 모두 지원하며 **최소 한번 이상 메세지 배달**을 보장한다. 
