@@ -32,3 +32,24 @@
 
 ## 여러 Azure IoT 솔루션 비교
 * [https://docs.microsoft.com/en-us/azure/iot-fundamentals/iot-services-and-technologies](https://docs.microsoft.com/en-us/azure/iot-fundamentals/iot-services-and-technologies)
+
+## IoT Hub Messaging
+Device to Cloud, Cloud to Device 모두 지원하며 **최소 한번 이상 메세지 배달**을 보장한다. 
+
+### Device-To-Cloud
+device-facing endpoint (/devices/{deviceId}/messages/events)를 사용하여 메세지 전송 및 라우팅 규칙 적용가능, IoT Hub는 Service Bus 보다는 Event Hub와 더 닮아있다. streaming 메세지 패턴을 이용하여 메세지를 전달하며 기본값으로 7일간 메세지를 저장한다. 클라우드로 전송하는 메세지는 최대 256KB까지 전송 가능하며, 몇개의 메세지를 묶어서 함께 전송할 수 도 있다.
+
+Event Hub와의 가장 큰 차이점을 말하자면, IoT Hub는 기기별로 인증을 요구하며 접근 제어가 가능하다. 또한 최대 10개 까지의 custom endpoint를 생성할 수 있다. Event Hub에 비해 동시에 더 많은 디바이스 접속을 허용한다. (Event Hub는 AMQP의 경우 네임스페이스 별로 5000 개가 제한이다.) 또한, 임의로 파티셔닝 하는것을 허용하지 않으며, 스케일링 방식도 약간 다르다.
+
+### Cloud-To-Device
+service-facing endpoint (/messages/devicebound)로 메세지를 전송하면, 각 디바이스들은 device-specific endpoint (/devices/{deviceId}/messages/devicebound)를 통해 메세지를 받는다. 
+
+최소 한번 이상의 메세지 전송을 보장하는데 방식은 다음과 같다. 
+![image](https://prod-edxapp.edx-cdn.org/assets/courseware/v1/770ab10a5ea89bcb94ebb18dd280b90f/asset-v1:Microsoft+DEV225x+2T2018+type@asset+block/Mod1_CloudToDeviceMessaging.png)
+
+자세한 정보는 다음의 링크에서 참고할 수 있다. 
+* [https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messaging](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messaging)
+
+
+
+
