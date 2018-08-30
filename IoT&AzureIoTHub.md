@@ -50,6 +50,24 @@ service-facing endpoint (/messages/devicebound)로 메세지를 전송하면, �
 자세한 정보는 다음의 링크에서 참고할 수 있다. 
 * [https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messaging](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messaging)
 
+## Azure IoT Management Tools
+* IoTHub-Explorer: CLI Tool, 디바이스 관리 및 등록
+* Device Explorer app for IoT Hub devices: 로컬 PC에 설치하여 사용하는 프로그램으로 Azure IoT Hub에서와는 조금 다른 정보들을 보여준다. 이것을 사용해 Device Identity 관리, device to cloud 메세지 받기, cloud to device 즉, device로 메세지 전송 가능
+* Azure CLI 2.0 - Azure Resource 관리용 CLI 
+
+## Message and Device Security
+IoT 시나리오에서는 다음의 세가지 포인트에서 보안을 고려해야한다. 각각의 IoT Device에서의 Security, Device와 Cloud간의 연결시 보안 관점, 마지막으로 Cloud 상에 데이터가 저장될 때. 각각의 세부사항은 다음과 같다.
+
+### Device Security
+Device는 Azure IoT Hub와 통신할때 반드시 Security Token을 이용하거나, 혹은 X.509 인증서를 사용하여 통신해야 한다. 
+
+### Connection Security
+TLS를 이용하여 통신한다. (TLS 1.2, 1.1, 1.0 지원) 
+
+### Cloud Security 
+각 Security Key 별로 권한 제어가 가능하다. RegistryRead / RegistryReadWrite / ServiceConnect / DeviceConnect 용도별로 권한 제어가 가능하다. 
+
+
 
 
 
